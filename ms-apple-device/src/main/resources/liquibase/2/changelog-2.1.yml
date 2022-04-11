@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create device_specifications table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: device_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_id
+                    references: device(id)
+              - column:
+                  name: type
+                  type: varchar(128)
+              - column:
+                  name: value
+                  type: varchar(256)
+            remarks: A String
+            schemaName: public
+            tableName: device_specifications

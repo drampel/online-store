@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/auth
+    username: postgres
+    password: user
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/changelog-master.yml
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+
+queue:
+  mail-sender-q: Mail_Sender_Q

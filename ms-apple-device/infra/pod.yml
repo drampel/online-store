@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ms-apple-device
+  labels:
+    app: ms-apple-device
+spec:
+  containers:
+  - image: drampel/ms-apple-device
+    name: ms-apple-device
+    ports:
+    - containerPort: 8080
+      protocol: TCP

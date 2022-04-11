@@ -1,0 +1,1550 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-size: 100% 100%;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #1f1f1f;
+}
+
+#header_block {
+    width: 100%;
+    height: 80px;
+    background-color: #040404;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#top_block {
+    width: 1535px;
+    height: 80px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: #040404;
+}
+
+#top_block_hidden {
+    width: 1535px;
+    height: 80px;
+    padding: 0;
+    margin: 0 auto;
+    background-color: #040404;
+    display: none;
+}
+
+#top_logo, #top_logo_hidden {
+    float: left;
+}
+
+#top_logo_link, #top_logo_link_hidden {
+    height: 80px;
+    padding: 10px;
+    float: left;
+}
+
+#top_nav_table_block {
+    width: 1535px;
+    margin: 0 auto;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    right: 0;
+    z-index: 101;
+    display: none;
+}
+
+#blackout_hamburger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+
+#top_nav_table {
+    float: left;
+    border-collapse: collapse;
+    margin-left: 110px;
+    z-index: 101;
+}
+
+.top_nav_table_tr {
+    background-color: #040404;
+}
+
+.top_nav_table_tr th {
+    padding: 0;
+}
+
+.top_link {
+    color: #a3c3a3;
+    padding: 0 10px;
+    height: 40px;
+    width: auto;
+    font: bold 1em Audiowide, "Courier New", sans-serif;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#hamburger {
+    float: left;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+#nav_bar_icons, #nav_bar_icons_hidden {
+    float: right;
+    margin-right: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+.div_nav_bar_icons, .div_nav_bar_icons_hidden {
+    margin-right: 30px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.link_nav_bar_icons, .link_nav_bar_icons_hidden {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+.top_link:hover, .top_link:active, .dropdown_content_links:hover, .dropdown_content_links:active,
+.link_nav_bar_icons:hover, .link_nav_bar_icons:active, .link_nav_bar_icons_hidden:hover, .link_nav_bar_icons_hidden:active {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #040404;
+    padding: 0;
+    z-index: 101;
+}
+
+.dropdown_content_links {
+    float: none;
+    width: auto;
+    height: 40px;
+    font: bold 1em Audiowide, "Courier New", sans-serif;
+    color: #a3c3a3;
+    padding: 0 10px;
+    border-left: thick solid #00ff00;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.show {
+    display: block;
+}
+
+#device_search_block {
+    width: auto;
+    height: 80px;
+    margin-right: 15px;
+    justify-content: right;
+    align-items: center;
+    z-index: 101;
+    display: none;
+}
+
+#blackout_search {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    display: none;
+}
+
+#search_bar_div, #search_button_div {
+    float: left;
+}
+
+#search_bar_label {
+    width: 300px;
+    height: 40px;
+    float: left;
+}
+
+#search_bar {
+    width: 300px;
+    height: 40px;
+    padding: 0 10px;
+    border: thin solid #606060;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+    color: #a3c3a3;
+    background-color: #1f1f1f;
+    outline: none;
+}
+
+#search_button {
+    height: 40px;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+    width: 80px;
+    border: none;
+    color: #1f1f1f;
+    background-color: #00ff00;
+}
+
+#search_button:hover, #search_button:active {
+    background-color: #00c600;
+    cursor: pointer;
+}
+
+#personal_area {
+    display: none;
+}
+
+#login_and_registration_block {
+    height: 100%;
+    width: 1535px;
+    margin: 0 auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    display: none;
+}
+
+#blackout {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 75%, .25);
+    z-index: 100;
+    display: none;
+}
+
+#login_block {
+    width: 380px;
+    padding: 20px 30px 30px;
+    background-color: #1c1c1c;
+    z-index: 101;
+}
+
+#login_div_close {
+    height: 20px;
+    float: right;
+    clear: both;
+    margin-bottom: 15px;
+}
+
+#login_close {
+    font-size: 20px;
+    color: #a3c3a3;
+    cursor: pointer;
+}
+
+#div_forgot_password {
+    float: right;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#link_forgot_password {
+    color: #a3c3a3;
+    text-decoration: none;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+}
+
+#login_close:hover, #login_close:active, #link_forgot_password:hover, #link_forgot_password:active {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+#login {
+    width: 320px;
+    float: left;
+    padding: 0;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+}
+
+.login_labels {
+    width: 320px;
+    height: 40px;
+    margin: 10px 0;
+    float: left;
+}
+
+.login_inputs {
+    width: 320px;
+    height: 40px;
+    padding: 0 10px;
+    border: thin solid #606060;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+    color: #a3c3a3;
+    background-color: #2c2c2c;
+    outline: none;
+}
+
+#log_in_and_create_new_account_buttons {
+    width: 320px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+}
+
+#div_log_in_button {
+    height: 40px;
+    margin-right: 56px;
+    float: left;
+}
+
+#div_create_new_account_button {
+    height: 40px;
+    float: left;
+}
+
+#log_in_button, #create_new_account_button {
+    height: 40px;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+    float: left;
+}
+
+#log_in_button {
+    width: 80px;
+    border: none;
+    color: #1c1c1c;
+    background-color: #00ff00;
+}
+
+#create_new_account_button {
+    width: 184px;
+    color: #00ff00;
+    border: medium solid #00ff00;
+    background-color: #1c1c1c;
+}
+
+#log_in_button:hover, #log_in_button:active {
+    background-color: #00c600;
+    cursor: pointer;
+}
+
+#create_new_account_button:hover, #create_new_account_button:active {
+    color: #00c600;
+    border: medium solid #00c600;
+    cursor: pointer;
+}
+
+#registration_block {
+    width: 440px;
+    padding: 20px 30px 30px;
+    background-color: #1c1c1c;
+    z-index: 101;
+    display: none;
+}
+
+#registration_div_close {
+    height: 20px;
+    float: right;
+    margin-bottom: 15px;
+}
+
+#registration_close {
+    font-size: 20px;
+    color: #a3c3a3;
+    cursor: pointer;
+}
+
+#registration_close:hover, #registration_close:active {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+#div_create_new_account {
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#p_create_new_account {
+    color: #00ff00;
+    margin: 0;
+    font: bold 1.5em Georgia, "Courier New", sans-serif;
+}
+
+#registration {
+    width: 380px;
+    float: left;
+    padding: 0;
+}
+
+.registration_labels {
+    width: 380px;
+    height: 40px;
+    margin: 10px 0;
+    float: left;
+}
+
+.registration_inputs {
+    width: 380px;
+    height: 40px;
+    padding: 0 10px;
+    border: thin solid #606060;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+    color: #a3c3a3;
+    background-color: #2c2c2c;
+    outline: none;
+}
+
+#div_sign_up_button_one {
+    width: 380px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#sign_up_button {
+    height: 40px;
+    font: bold 1.2em Georgia, "Courier New", sans-serif;
+    width: 100px;
+    border: none;
+    color: #1c1c1c;
+    background-color: #00ff00;
+}
+
+#sign_up_button:hover, #sign_up_button:active {
+    background-color: #00c600;
+    cursor: pointer;
+}
+
+#central_block_one {
+    background-color: #1f1f1f;
+    width: 100%;
+}
+
+#personal_area_block_one {
+    height: 100%;
+    width: 1535px;
+    margin: 0 auto;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 101;
+    display: none;
+}
+
+#blackout_personal_area {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 75%, .25);
+    z-index: 100;
+    display: none;
+}
+
+#personal_area_block_two {
+    width: 440px;
+    padding: 20px 30px 30px;
+    background-color: #1c1c1c;
+    z-index: 101;
+    display: block;
+}
+
+#personal_area_div_close {
+    height: 20px;
+    float: right;
+    margin-bottom: 15px;
+}
+
+#personal_area_close {
+    font-size: 20px;
+    color: #a3c3a3;
+    cursor: pointer;
+}
+
+#personal_area_close:hover, #personal_area_close:active {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+#div_user_data {
+    float: left;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+#p_user_data {
+    color: #00ff00;
+    margin: 0;
+    font: bold 1.5em Georgia, "Courier New", sans-serif;
+}
+
+#user_data {
+    width: 380px;
+    float: left;
+    padding: 0;
+}
+
+.user_data_labels {
+    width: 380px;
+    height: 40px;
+    margin: 10px 0;
+    float: left;
+    text-align: center;
+}
+
+.user_data_inputs {
+    width: auto;
+    height: 40px;
+    padding: 0 10px;
+    font: bold 1em Georgia, "Courier New", sans-serif;
+    color: #a3c3a3;
+    background-color: #2c2c2c;
+    outline: none;
+    border: none;
+    text-align: center;
+}
+
+#div_log_out_button_one {
+    width: 380px;
+    height: 40px;
+    float: left;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#log_out_button {
+    height: 40px;
+    font: bold 1.2em Georgia, "Courier New", sans-serif;
+    width: 100px;
+    border: none;
+    color: #1c1c1c;
+    background-color: #00ff00;
+}
+
+#log_out_button:hover, #log_out_button:active {
+    background-color: #00c600;
+    cursor: pointer;
+}
+
+#central_block_one::after, #central_block_two::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+#central_block_two {
+    width: 1535px;
+    margin: 0 auto;
+}
+
+#sorting_block {
+    width: 100%;
+    margin: 0 0 25px;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+}
+
+#sorting_div {
+    width: 300px;
+    margin-right: 35px;
+    padding: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.sorting_links {
+    width: 130px;
+    font: bold 0.9em Audiowide, "Courier New", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #a3c3a3;
+    text-align: center;
+}
+
+.sorting_links:hover, .sorting_links:active {
+    color: #00ff00;
+    cursor: pointer;
+}
+
+.sorting_links_p {
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    line-height: 30px;
+
+}
+
+.fa-sort-amount-down-alt, .fa-sort-amount-down {
+    font-size: 1.4em;
+    margin-left: 3px;
+    vertical-align: -3px;
+}
+
+#left_column_one {
+    width: 20%;
+    float: left;
+    margin: 177px 0 0;
+    top: 257px;
+}
+
+#slider_images {
+    height: 307px;
+}
+
+#left_column_two {
+    width: 360px;
+    float: left;
+    padding: 20px 5px;
+    margin-left: 10px;
+    display: none;
+}
+
+.device {
+    width: 350px;
+    height: 625px;
+}
+
+.device_image {
+    height: 390px;
+    padding: 20px 0;
+    margin: 0;
+    background-color: #040404;
+}
+
+.device_name_two {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+}
+
+.device_name_p_two {
+    font: bold 1.3em Audiowide, "Courier New", sans-serif;
+    color: #00ff00;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.color_selection_two {
+    height: 30px;
+    width: 100%;
+    padding: 0 70px;
+    margin: 20px 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.div_select_button_two {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.select_button_two {
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.device_price_and_basket_two {
+    margin-top: 20px;
+    height: 65px;
+}
+
+.device_price_p_two {
+    font: bold 1.3em Audiowide, "Courier New", sans-serif;
+    color: #00ff00;
+    width: 145px;
+    height: 30px;
+    margin: 15px 45px 20px 20px;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.5;
+    float: left;
+}
+
+.device_price_p_two u {
+    text-decoration: none;
+    font: 0.9em Audiowide, "Courier New", sans-serif;
+    margin-left: 4px;
+}
+
+.add_to_cart_two {
+    height: 65px;
+    width: 120px;
+    float: left;
+    padding: 5px 0 10px 0;
+    margin-right: 20px;
+}
+
+.add_to_cart_button_two {
+    height: 50px;
+    width: 120px;
+    padding: 0 6px;
+    border: none;
+    background-color: #00ff00;
+    font: bold 1em Audiowide, "Courier New", sans-serif;
+    color: #1f1f1f;
+    border-radius: 3px;
+}
+
+.add_to_cart_button_two:hover, .add_to_cart_button_two:active {
+    background-color: #00c600;
+    cursor: pointer;
+}
+
+#central_column_one {
+    width: 80%;
+    float: left;
+    padding: 25px 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+#search_without_result {
+    height: 434px;
+    font: bold 1.2em Georgia, "Courier New", sans-serif;
+    color: #a3c3a3;
+    text-align: center;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    display: none;
+}
+
+#search_without_result p {
+    margin: 0;
+}
+
+.i_content {
+    width: 300px;
+    height: 501px;
+    margin: 0 10px 50px;
+    background-color: #040404;
+}
+
+.i_content:hover, .i_content:active {
+    box-shadow: 5px 5px 20px 10px #1a581a;
+    cursor: pointer;
+}
+
+.central_column_link {
+    height: 385px;
+    display: block;
+}
+
+.i_content_images {
+    height: 285px;
+    padding: 35px 20px 0;
+    margin: 0;
+}
+
+.i_content_image:nth-child(n+2) {
+    display: none;
+}
+
+.device_name_one {
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.device_name_p_one {
+    font: bold 1.1em Audiowide, "Courier New", sans-serif;
+    color: #00ff00;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.5;
+}
+
+.device_name_p:nth-child(n+2) {
+    display: none;
+}
+
+.color_selection_one {
+    height: 25px;
+    width: 100%;
+    padding: 0 65px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.div_select_button_one {
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+    border-radius: 50%;
+}
+
+.select_button_one {
+    width: 17px;
+    height: 17px;
+    padding: 0;
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.Gold_button_div:hover, .Gold_button_div:active {
+    padding: 2px;
+    border: 2px solid #f6e0c9;
+}
+
+.Gold_button {
+    background-color: #f6e0c9;
+}
+
+.Blue_button_div:hover, .Blue_button_div:active {
+    padding: 2px;
+    border: 2px solid #00a6dc;
+}
+
+.Blue_button {
+    background-color: #00a6dc;
+}
+
+.Graphite_button_div:hover, .Graphite_button_div:active {
+    padding: 2px;
+    border: 2px solid #686868;
+}
+
+.Graphite_button {
+    background-color: #686868;
+}
+
+.Green_button_div:hover, .Green_button_div:active {
+    padding: 2px;
+    border: 2px solid #165f67;
+}
+
+.Green_button {
+    background-color: #165f67;
+}
+
+.Grey_button_div:hover, .Grey_button_div:active, .Gray_button_div:hover, .Gray_button_div:active {
+    padding: 2px;
+    border: 2px solid #343d46;
+}
+
+.Grey_button, .Gray_button {
+    background-color: #343d46;
+}
+
+.Silver_button_div:hover, .Silver_button_div:active {
+    padding: 2px;
+    border: 2px solid #e7e7e5;
+}
+
+.Silver_button {
+    background-color: #e7e7e5;
+}
+
+.Black_button_div:hover, .Black_button_div:active {
+    padding: 2px;
+    border: 2px solid #404040;
+}
+
+.Black_button {
+    background-color: #404040;
+}
+
+.Purple_button_div:hover, .Purple_button_div:active {
+    padding: 2px;
+    border: 2px solid #c8a2c8;
+}
+
+.Purple_button {
+    background-color: #c8a2c8;
+}
+
+.Red_button_div:hover, .Red_button_div:active {
+    padding: 2px;
+    border: 2px solid #e5040e;
+}
+
+.Red_button {
+    background-color: #e5040e;
+}
+
+.White_button_div:hover, .White_button_div:active {
+    padding: 2px;
+    border: 2px solid #e9e9e9;
+}
+
+.White_button {
+    background-color: #e9e9e9;
+}
+
+.device_price_and_basket_one {
+    margin-top: 25px;
+    height: 66px;
+    border-bottom: thin solid #00ff00;
+}
+
+.device_price_p_one {
+    font: bold 1.2em Audiowide, "Courier New", sans-serif;
+    color: #00ff00;
+    width: 90px;
+    height: 30px;
+    margin: 10px 1px 25px 20px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: top;
+    line-height: 1.5;
+    float: left;
+    border: 0;
+    background-color: #040404;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.currency_rate {
+    display: inline-block;
+    width: 40px;
+    text-align: center;
+    height: 30px;
+    padding-top: 6px;
+    text-decoration: none;
+    font: 1em Audiowide, "Courier New", sans-serif;
+    margin: 10px 34px 25px 0;
+    color: #00ff00;
+    float: left;
+}
+
+.add_to_cart_one {
+    height: 55px;
+    width: 100px;
+    float: left;
+    padding: 5px 0 10px 0;
+    margin-bottom: 10px;
+    margin-right: 15px;
+}
+
+.add_to_cart_button_one {
+    height: 40px;
+    width: 100px;
+    padding: 0 6px;
+    border: none;
+    background-color: #00ff00;
+    font: bold 0.8em Audiowide, "Courier New", sans-serif;
+    color: #1f1f1f;
+    border-radius: 3px;
+}
+
+.add_to_cart_button_one:hover, .add_to_cart_button_one:active {
+    background-color: #00c600;
+    cursor: pointer;
+}
+
+#central_column_two {
+    width: 831px;
+    padding: 10px 5px;
+    margin-left: 70px;
+    margin-bottom: 15px;
+    float: left;
+    display: none;
+}
+
+.device_specifications {
+    width: 821px;
+}
+
+.table_name {
+    padding-left: 24px;
+    margin: 33px 0 10px;
+}
+
+.table_name_p {
+    font: bold 1.2em Verdana, Georgia, sans-serif;
+    color: #a3c3a3;
+    margin: 0;
+}
+
+.specifications_table {
+    border-collapse: collapse;
+    font: normal 1em Georgia, Verdana, sans-serif;
+    color: #a3c3a3;
+}
+
+.specifications_name, .specifications_description {
+    border: 2px solid #606060;
+    padding: 5px 10px;
+}
+
+.specifications_name {
+    border-left: none;
+    width: 200px;
+}
+
+.specifications_description {
+    width: 620px;
+}
+
+#footer_block {
+    width: 100%;
+    height: 300px;
+    background-color: #040404;
+}
+
+#bottom_block {
+    width: 1535px;
+    height: inherit;
+    padding: 0;
+    margin: 0 auto;
+}
+
+#bottom_logo {
+    float: left;
+    margin: 87px 0 0 87px;
+    text-align: center;
+}
+
+#bottom_logo_p {
+    margin: 0;
+    text-shadow: 7px 7px 7px #00ff00;
+    color: white;
+    font: bold 3.1em Audiowide, "Courier New", sans-serif;
+}
+
+#contacts_addresses {
+    float: right;
+    margin: 25px 60px 0 0;
+}
+
+#contacts_addresses p {
+    margin: 0;
+    color: #a3c3a3;
+    font: bold 1.2em Georgia, "Courier New", sans-serif;
+    line-height: 1.3;
+}
+
+#contacts_addresses .phone_number {
+    font: normal 1.2em Georgia, "Courier New", sans-serif;
+}
+
+#contacts_addresses #contacts, #contacts_addresses #addresses {
+    font: bold 1.1em Georgia, "Courier New", sans-serif;
+    color: #00ff00;
+}
+
+@media screen and (min-height: 796px) {
+    #login_and_registration_block, #personal_area_block_one {
+        height: 796px;
+    }
+}
+
+@media screen and (max-height: 500px) {
+    #header_block {
+        position: static;
+    }
+
+    #top_nav_table_block {
+        position: absolute;
+    }
+
+}
+
+@media screen and (max-width: 1535px) {
+    #top_block, #central_block_two, #bottom_block, #login_and_registration_block, #personal_area_block_one,
+    #top_nav_table_block {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 1338px) {
+    #central_column_one {
+        width: 100%;
+    }
+
+    #left_column_one {
+        position: static;
+        width: 100%;
+        height: 0;
+        margin: 0;
+        float: none;
+    }
+
+    #slider_images {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    #left_column_two {
+        margin-left: 0;
+    }
+
+    #central_column_two {
+        margin-left: 15px;
+    }
+}
+
+@media screen and (max-width: 1230px) {
+    #left_column_two, #central_column_two {
+        width: 100%;
+        padding: 0;
+    }
+
+    #central_column_two {
+        margin-left: 0;
+    }
+
+    .device, .device_specifications {
+        margin: 0 auto;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 855px) {
+    .device_specifications {
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    #hamburger {
+        margin-left: 15px;
+    }
+
+    #search_bar_label {
+        width: 230px;
+    }
+
+    #search_bar {
+        width: 230px;
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    #search_button {
+        width: 70px;
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    #nav_bar_icons {
+        margin: 0;
+    }
+
+    .div_nav_bar_icons {
+        margin-right: 15px;
+    }
+
+    #sorting_div {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .device_specifications {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #top_block_hidden {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    #top_nav_ul {
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    #footer_block {
+        position: absolute;
+        height: auto;
+        text-align: center;
+    }
+
+    #bottom_logo {
+        margin: 20px 0 30px;
+        width: 100%;
+    }
+
+    #contacts_addresses {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    #top_nav_table {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .device_specifications {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    #device_search_block {
+        position: fixed;
+        height: 40px;
+        top: 80px;
+        right: 0;
+        left: 0;
+        margin: 0;
+        justify-content: center;
+    }
+
+    #search_bar {
+        padding: 0 5px;
+    }
+
+    #sorting_block {
+        justify-content: space-evenly;
+        margin: 20px 0 15px;
+    }
+
+    #sorting_div {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .device_specifications {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .top_link, .dropdown_content_links {
+        font: bold 0.8em Audiowide, "Courier New", sans-serif;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #registration_block, #personal_area_block_two {
+        width: 280px;
+        padding: 10px 15px 15px;
+    }
+
+    #registration_div_close, #personal_area_div_close {
+        height: 16px;
+    }
+
+    #registration_close, #personal_area_close {
+        font-size: 16px;
+    }
+
+    #p_create_new_account, #p_user_data {
+        font: bold 1.1em Georgia, "Courier New", sans-serif;
+    }
+
+    #registration, #user_data {
+        width: 250px;
+    }
+
+    .registration_labels, .user_data_labels {
+        width: 250px;
+    }
+
+    .registration_inputs {
+        width: 250px;
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    .user_data_inputs {
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    #div_sign_up_button_one, #div_log_out_button_one {
+        width: 250px;
+        margin-top: 10px;
+    }
+
+    #sign_up_button, #log_out_button {
+        width: 80px;
+        font: bold 1em Georgia, "Courier New", sans-serif;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .device_specifications {
+        width: 300px;
+    }
+
+    .specifications_table {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .div_nav_bar_icons_hidden .link_nav_bar_icons_hidden {
+        font-size: 22px;
+    }
+
+    .i_content {
+        margin: 0 0 30px;
+    }
+
+    .device {
+        width: 270px;
+        height: 540px;
+    }
+
+    .i_content_img {
+        width: 270px;
+        height: 270px;
+    }
+
+    .device_image {
+        height: 320px;
+    }
+
+    .device_name_p_two {
+        font-size: 1.1em;
+    }
+
+    .color_selection_two {
+        height: 25px;
+        margin: 10px 0;
+        padding: 0 50px;
+    }
+
+    .div_select_button_two {
+        width: 25px;
+        height: 25px;
+    }
+
+    .select_button_two {
+        width: 17px;
+        height: 17px;
+    }
+
+    .device_price_p_two {
+        font-size: 1.1em;
+        width: 125px;
+        margin: 15px 35px 20px 10px;
+    }
+
+    .add_to_cart_two {
+        width: 90px;
+        height: 55px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+    .add_to_cart_button_two {
+        margin: 0;
+        width: 90px;
+        height: 40px;
+        font: bold 0.7em Audiowide, "Courier New", sans-serif;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    #login_block {
+        width: 280px;
+        padding: 10px 15px 15px;
+    }
+
+    #login_div_close {
+        height: 16px;
+    }
+
+    #login_close {
+        font-size: 16px;
+    }
+
+    #login {
+        width: 250px;
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    .login_labels {
+        width: 250px;
+    }
+
+    .login_inputs {
+        width: 250px;
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    #log_in_and_create_new_account_buttons {
+        width: 250px;
+        margin-top: 10px;
+    }
+
+    #div_log_in_button {
+        margin-right: 37px;
+    }
+
+    #log_in_button, #create_new_account_button {
+        font: bold 0.9em Georgia, "Courier New", sans-serif;
+    }
+
+    #log_in_button {
+        width: 60px;
+    }
+
+    #create_new_account_button {
+        width: 153px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .top_link, .dropdown_content_links {
+        font: bold 0.6em Audiowide, "Courier New", sans-serif;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #device_search_block {
+        height: 30px;
+    }
+
+    #search_bar_label {
+        width: 205px;
+        height: 30px;
+    }
+
+    #search_bar {
+        width: 205px;
+        height: 30px;
+        font: bold 0.8em Georgia, "Courier New", sans-serif;
+    }
+
+    #search_button {
+        width: 65px;
+        height: 30px;
+        font: bold 0.8em Georgia, "Courier New", sans-serif;
+    }
+
+    #sorting_block {
+        margin: 10px 0 15px;
+    }
+
+    #sorting_div {
+        width: 270px;
+    }
+
+    .sorting_links {
+        font: bold 0.8em Audiowide, "Courier New", sans-serif;
+    }
+
+    .sorting_links_p {
+        height: 24px;
+        line-height: 24px;
+    }
+
+    .i_content, .central_column_link {
+        width: 270px;
+    }
+
+    .i_content_images {
+        padding: 35px 5px 0;
+    }
+
+    .color_selection_one {
+        padding: 0 50px;
+    }
+
+    .device_price_p_one {
+        width: 80px;
+        font-size: 1.1em;
+        margin: 10px 1px 25px 15px;
+    }
+
+    .currency_rate {
+        width: 35px;
+        font-size: 0.9em;
+        padding-top: 7px;
+    }
+
+    .add_to_cart_one {
+        width: 90px;
+    }
+
+    .add_to_cart_button_one {
+        width: 90px;
+        font: bold 0.7em Audiowide, "Courier New", sans-serif;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .div_nav_bar_icons_hidden .link_nav_bar_icons_hidden {
+        font-size: 20px;
+    }
+
+    .top_link, .dropdown_content_links {
+        font: bold 0.5em Audiowide, "Courier New", sans-serif;
+    }
+
+    .device_specifications {
+        width: 250px;
+    }
+
+    .specifications_table {
+        font-size: 0.8em;
+    }
+
+    .table_name_p {
+        font-size: 1.1em;
+    }
+
+    .device_price_p_two {
+        font-size: 1em;
+    }
+
+    #footer_block {
+        font-size: 14px;
+    }
+}

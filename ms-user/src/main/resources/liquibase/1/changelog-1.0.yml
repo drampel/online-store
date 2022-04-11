@@ -1,0 +1,56 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create auth_user table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: first_name
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: last_name
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: mobile_number
+                  type: varchar(32)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email
+                  type: varchar(64)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: salt
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: verifier
+                  type: text
+                  constraints:
+                    nullable: false
+              - column:
+                  name: status
+                  type: varchar(8)
+              - column:
+                  name: created_at
+                  type: timestamp
+              - column:
+                  name: updated_at
+                  type: timestamp
+            remarks: A String
+            schemaName: public
+            tableName: auth_user

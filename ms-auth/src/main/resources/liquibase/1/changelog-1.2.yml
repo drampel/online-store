@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create auth_user_history table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: auth_user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_auth_user_id
+                    references: auth_user
+              - column:
+                  name: first_name
+                  type: varchar(32)
+              - column:
+                  name: last_name
+                  type: varchar(32)
+              - column:
+                  name: mobile_number
+                  type: varchar(32)
+              - column:
+                  name: email
+                  type: varchar(64)
+              - column:
+                  name: salt
+                  type: text
+              - column:
+                  name: verifier
+                  type: text
+              - column:
+                  name: status
+                  type: varchar(8)
+              - column:
+                  name: created_at
+                  type: timestamp
+              - column:
+                  name: updated_at
+                  type: timestamp
+            remarks: A String
+            schemaName: public
+            tableName: auth_user_history

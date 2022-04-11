@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create device_history table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: device_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_id
+                    references: device(id)
+              - column:
+                  name: name
+                  type: varchar(64)
+              - column:
+                  name: price
+                  type: decimal
+              - column:
+                  name: status
+                  type: varchar(8)
+              - column:
+                  name: created_at
+                  type: timestamp
+              - column:
+                  name: updated_at
+                  type: timestamp
+            remarks: A String
+            schemaName: public
+            tableName: device_history

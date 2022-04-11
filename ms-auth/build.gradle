@@ -1,0 +1,38 @@
+plugins {
+    id 'org.springframework.boot' version '2.5.6'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+}
+
+group = 'az.apple_corporation'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa:2.6.4'
+    implementation 'org.springframework.boot:spring-boot-starter-validation:2.6.4'
+    implementation 'org.springframework.boot:spring-boot-starter-web:2.6.4'
+    implementation 'org.springframework.boot:spring-boot-starter-amqp:2.6.4'
+    implementation 'com.nimbusds:nimbus-jose-jwt:9.20'
+    implementation 'com.nimbusds:srp6a:2.1.0'
+    implementation('org.redisson:redisson:3.16.8')
+    runtimeOnly 'org.postgresql:postgresql:42.3.3'
+    implementation 'org.liquibase:liquibase-core:4.8.0'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:2.6.4'
+}
+
+test {
+    useJUnitPlatform()
+}

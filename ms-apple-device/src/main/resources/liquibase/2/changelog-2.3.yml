@@ -1,0 +1,19 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create device_entity_image_names table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: device_entity_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_id
+                    references: device(id)
+              - column:
+                  name: image_names
+                  type: varchar(64)
+            remarks: A String
+            schemaName: public
+            tableName: device_entity_image_names

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Apple Store</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    </head>
+    <body>
+        <header id="header_block">
+            <div id="top_block">
+                <div id="top_logo">
+                    <a id="top_logo_link" href="#">
+                        <img src=<%=require("./img/logo/logo.jpg").default%> width="60" height="60" alt="Logo">
+                    </a>
+                </div>
+                <div id="hamburger">
+                    <a id="hamburger_menu" class="fas fa-bars link_nav_bar_icons"></a>
+                </div>
+                <div id="top_nav_table_block">
+                    <div id="blackout_hamburger"></div>
+                    <table id="top_nav_table">
+                        <tbody id="top_nav_tbody">
+                        </tbody>
+                    </table>
+                </div>
+                <div id="nav_bar_icons">
+                    <div id="blackout_search"></div>
+                    <div id="device_search_block">
+                        <div id="search_bar_div">
+                            <label id="search_bar_label" for="search_bar">
+                                <input id="search_bar" type="text" name="search_bar" placeholder="Type here">
+                            </label>
+                        </div>
+                        <div id="search_button_div">
+                            <input id="search_button" name="search_button" type="submit" value="Search">
+                        </div>
+                    </div>
+                    <div id="device_search" class="div_nav_bar_icons">
+                        <a id="device_search_link" class="fas fa-search link_nav_bar_icons"></a>
+                    </div>
+                    <div id="shopping_cart" class="div_nav_bar_icons">
+                        <a id="shopping_cart_link" class="fas fa-shopping-cart link_nav_bar_icons" href="#"></a>
+                    </div>
+                    <div id="login_and_registration" class="div_nav_bar_icons">
+                        <a id="login_and_registration_link" class="far fa-user link_nav_bar_icons"></a>
+                    </div>
+                    <div id="personal_area" class="div_nav_bar_icons">
+                        <a id="personal_area_link" class="far fa-user link_nav_bar_icons"></a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="login_and_registration_block">
+            <div id="blackout"></div>
+            <div id="login_block">
+                <div id="login_div_close">
+                    <i id="login_close" class="fas fa-times"></i>
+                </div>
+                <form id="login" name="login">
+                    <label class="login_labels" for="login_email">
+                        <input id="login_email" class="login_inputs" type="text" name="login_email"
+                               placeholder="E-mail" form="login" required>
+                    </label>
+                    <label class="login_labels" for="login_password">
+                        <input id="login_password" class="login_inputs" type="password" name="login_password"
+                               placeholder="Password" form="login" required>
+                    </label>
+                    <div id="log_in_and_create_new_account_buttons">
+                        <div id="div_log_in_button">
+                            <input id="log_in_button" name="log_in_button" type="button" value="Log In"
+                                   form="login">
+                        </div>
+                        <div id="div_create_new_account_button">
+                            <input id="create_new_account_button" name="create_new_account_button" type="button"
+                                   value="Create New Account">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="registration_block">
+                <div id="registration_div_close">
+                    <i id="registration_close" class="fas fa-times"></i>
+                </div>
+                <div id="div_create_new_account">
+                    <p id="p_create_new_account">Create New Account</p>
+                </div>
+                <form id="registration" name="registration">
+                    <label class="registration_labels" for="registration_first_name">
+                        <input id="registration_first_name" class="registration_inputs" type="text"
+                               name="registration_first_name" placeholder="First name" form="registration" required>
+                    </label>
+                    <label class="registration_labels" for="registration_last_name">
+                        <input id="registration_last_name" class="registration_inputs" type="text"
+                               name="registration_last_name" placeholder="Last name" form="registration" required>
+                    </label>
+                    <label class="registration_labels" for="registration_mobile_number">
+                        <input id="registration_mobile_number" class="registration_inputs" type="text"
+                               name="registration_mobile_number" placeholder="Mobile number" form="registration"
+                               required>
+                    </label>
+                    <label class="registration_labels" for="registration_email">
+                        <input id="registration_email" class="registration_inputs" type="text"
+                               name="registration_email" placeholder="E-mail" form="registration" required>
+                    </label>
+                    <label class="registration_labels" for="registration_password">
+                        <input id="registration_password" class="registration_inputs" type="password"
+                               name="registration_password" placeholder="Password" form="registration" required>
+                    </label>
+                    <label class="registration_labels" for="registration_confirm_password">
+                        <input id="registration_confirm_password" class="registration_inputs" type="password"
+                               name="registration_confirm_password" placeholder="Confirm password" form="registration"
+                               required>
+                    </label>
+                    <div id="div_sign_up_button_one">
+                        <div id="div_sign_up_button_two">
+                            <input id="sign_up_button" name="sign_up_button" type="button" value="Sign Up"
+                                   form="registration">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="personal_area_block_one">
+            <div id="blackout_personal_area"></div>
+            <div id="personal_area_block_two">
+            <div id="personal_area_div_close">
+                <i id="personal_area_close" class="fas fa-times"></i>
+            </div>
+            <div id="div_user_data">
+                <p id="p_user_data">User data</p>
+            </div>
+            <form id="user_data" name="user_data">
+                <label class="user_data_labels" for="user_data_first_name">
+                    <input id="user_data_first_name" class="user_data_inputs" type="text"
+                           name="user_data_first_name" form="user_data" readonly>
+                </label>
+                <label class="user_data_labels" for="user_data_last_name">
+                    <input id="user_data_last_name" class="user_data_inputs" type="text"
+                           name="user_data_last_name" form="user_data" readonly>
+                </label>
+                <label class="user_data_labels" for="user_data_mobile_number">
+                    <input id="user_data_mobile_number" class="user_data_inputs" type="text"
+                           name="user_data_mobile_number" form="user_data" readonly>
+                </label>
+                <label class="user_data_labels" for="user_data_email">
+                    <input id="user_data_email" class="user_data_inputs" type="text"
+                           name="user_data_email" form="user_data" readonly>
+                </label>
+                <div id="div_log_out_button_one">
+                    <div id="div_log_out_button_two">
+                        <input id="log_out_button" name="log_out_button" type="button" value="Log Out"
+                               form="user_data">
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+        <section id="central_block_one">
+            <div id="central_block_two">
+                <div id="left_column_one">
+                    <div id="slider_images">
+                        <img class="auto_slider_phones"
+                             src=<%=require("./img/slider_images/iPhone12ProMax.jpg").default%>
+                        width="307" height="307" alt="iPhone 12 Pro Max">
+                        <img class="auto_slider_phones"
+                             src=<%=require("./img/slider_images/iPhone11ProMax.jpg").default%>
+                        width="307" height="307" alt="iPhone 11 Pro Max">
+                        <img class="auto_slider_phones" src=<%=require("./img/slider_images/iPhoneXSMax.jpg").default%>
+                        width="307" height="307" alt="iPhone XS Max">
+                        <img class="auto_slider_phones" src=<%=require("./img/slider_images/iPhone12.jpg").default%>
+                        width="307" height="307" alt="iPhone 12">
+                        <img class="auto_slider_phones" src=<%=require("./img/slider_images/iPhoneSE.jpg").default%>
+                        width="307" height="307" alt="iPhone SE">
+                    </div>
+                </div>
+                <div id="left_column_two">
+                </div>
+                <div id="central_column_one">
+                    <div id="sorting_block">
+                        <div id="sorting_div">
+                            <a id="lowest_price_link" class="sorting_links">
+                                <p class="sorting_links_p">Lowest price<i class="fas fa-sort-amount-down-alt"></i></p>
+                            </a>
+                            <a id="highest_price_link" class="sorting_links">
+                                <p class="sorting_links_p">Highest price<i class="fas fa-sort-amount-down"></i></p>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="search_without_result">
+                        <p>The search has not given any results</p>
+                    </div>
+                </div>
+                <div id="central_column_two">
+                </div>
+            </div>
+        </section>
+        <footer id="footer_block">
+            <div id="bottom_block">
+                <div id="bottom_logo">
+                    <p id="bottom_logo_p">Apple<br>Store</p>
+                </div>
+                <div id="contacts_addresses">
+                    <p id="contacts">Contacts:</p>
+                    <p>For educational clients</p>
+                    <p class="phone_number">Support: 1-800-800-2775</p>
+                    <p class="phone_number">Sales department: 1-800-780-5009</p>
+                    <p>For corporate clients</p>
+                    <p class="phone_number">1-866-752-7753</p>
+                    <p id="addresses"><br>Addresses:</p>
+                    <p>One Apple Park Way,</p>
+                    <p>Cupertino, CA 95014,</p>
+                    <p>United States</p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin='anonymous'></script>
+</html>

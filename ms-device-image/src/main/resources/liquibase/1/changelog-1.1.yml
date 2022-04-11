@@ -1,0 +1,37 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create device_image_history table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    primaryKey: true
+                  autoIncrement: true
+              - column:
+                  name: device_image_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_device_image_id
+                    references: device_image
+              - column:
+                  name: name
+                  type: varchar(64)
+              - column:
+                  name: image
+                  type: oid
+              - column:
+                  name: status
+                  type: varchar(8)
+              - column:
+                  name: created_at
+                  type: timestamp
+              - column:
+                  name: updated_at
+                  type: timestamp
+            remarks: A String
+            schemaName: public
+            tableName: device_image_history

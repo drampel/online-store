@@ -1,0 +1,6 @@
+package az.apple_corporation.user.dao;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface UserRepository extends CrudRepository<UserEntity, Long> {
+}

@@ -1,0 +1,39 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-public
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+    - host: k8s.localhost
+      http:
+        paths:
+        - path: /auth
+          pathType: Prefix
+          backend:
+            service:
+              name: ms-auth-loadbalancer
+              port:
+                number: 80
+        - path: /users
+          pathType: Prefix
+          backend:
+            service:
+              name: ms-user-loadbalancer
+              port:
+                number: 80
+        - path: /device_images
+          pathType: Prefix
+          backend:
+            service:
+              name: ms-device-image-loadbalancer
+              port:
+                number: 80
+        - path: /devices
+          pathType: Prefix
+          backend:
+            service:
+              name: ms-apple-device-loadbalancer
+              port:
+                number: 80

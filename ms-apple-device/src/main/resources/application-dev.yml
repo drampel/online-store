@@ -1,0 +1,25 @@
+server:
+  port: 8082
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orm_apple_device
+    username: postgres
+    password: user
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQL10Dialect
+  liquibase:
+    enabled: true
+    change-log: classpath:liquibase/changelog-master.yml
+  servlet:
+    multipart:
+      max-file-size: 20MB
+      max-request-size: 20MB
+
+device:
+  images:
+    url: http://localhost:8083/device_images

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ms-auth
+  labels:
+    app: ms-auth
+spec:
+  containers:
+  - image: drampel/ms-auth
+    name: ms-auth
+    ports:
+    - containerPort: 8080
+      protocol: TCP

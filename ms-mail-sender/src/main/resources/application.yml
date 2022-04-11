@@ -1,0 +1,20 @@
+spring:
+  rabbitmq:
+    host: rabbit-rabbitmq.default.svc.cluster.local
+    port: 5672
+    username: user
+    password: bpWJ7c3WBJ
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: az.applecorporation@gmail.com
+    password: Applecorporation26846
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+queue:
+  mail-sender-q: Mail_Sender_Q

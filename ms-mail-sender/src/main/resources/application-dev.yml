@@ -1,0 +1,22 @@
+server:
+  port: 8085
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: az.applecorporation@gmail.com
+    password: Applecorporation26846
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+queue:
+  mail-sender-q: Mail_Sender_Q

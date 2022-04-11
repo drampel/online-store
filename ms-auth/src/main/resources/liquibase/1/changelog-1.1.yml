@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: Create active_refresh_token table
+      author: Apple Corporation
+      changes:
+        - createTable:
+            columns:
+              - column:
+                  name: uuid
+                  type: varchar(64)
+                  constraints:
+                    primaryKey: true
+            remarks: A String
+            schemaName: public
+            tableName: active_refresh_token
